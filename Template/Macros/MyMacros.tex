@@ -1,0 +1,72 @@
+% This file contains macros that can be called up from connected TeX files
+% It helps to summarise repeated code, e.g. figure insertion (see below).
+
+
+\usepackage{listings}
+\usepackage{booktabs}  % Nice tables
+\usepackage{dsfont} % To use the R of the real numbers (and the N, Z, etc.)
+\usepackage{longtable}
+
+% Inserts a TODO field in your text. Useful when you need to remember
+% future tasks.
+% Parameters 1: the text associated to your TODO.
+% Usage: \TODO{your_todo_text_here}
+\newcommand{\TODO}[1] {\textcolor{magenta}{\textbf{TODO: #1}}}
+
+% Track Changes Mode: strikes the first argument and replaces by the second one.
+%\usepackage[normalem]{ulem}
+%\usepackage{xcolor}
+%\newcommand{\TC}[2] {\textcolor{red}{#2 \sout{#1}}}
+%%\usepackage{soul}
+%%\newcommand{\TCMode}[2] {\textcolor{red}{\st{#1} #2}}
+\usepackage{cancel}
+\newcommand{\TC}[2] {\textcolor{red}{\cancel{#1} #2}}
+
+
+\usepackage{hyperref} % For hyperlinks in the document.
+% Changes the form and colors of the hyperlinks of the document.
+\hypersetup{
+	colorlinks,% 
+	citecolor=blue,% 
+	filecolor=blue,% 
+	linkcolor=blue,% 
+	urlcolor=blue 
+}
+
+%%% Use Helvetica instead of Roman font
+%\usepackage[T1]{fontenc}
+%\usepackage{helvet}	
+%\renewcommand*\familydefault{\sfdefault}
+
+%\usepackage{subfig} 			% Sub-Figures
+\usepackage{algorithmic} 		% For algorithms and pseudo-code 
+%\usepackage{wrapfig}			% To wrap figures (in the license page
+\usepackage{multirow} 
+
+% A macro to insert two column wide figure
+% Usage: \figuremacroTC{image_filename}{Caption header}{Caption}
+% To reference the figure just use the image_filename:
+% \ref{image_filename} will be a valid label
+\newcommand{\figuremacroTC}[3]{
+	\begin{figure*}[!t]%[htbp]
+		\centering
+		\includegraphics[width=1\textwidth]{#1}
+		\caption[#2]{\textbf{#2} - #3}
+		\label{#1}
+	\end{figure*}
+}
+
+% A macro to insert Two Column wide figure
+% But this time you can select the size of the figure
+% Usage: \figuremacroTC{image_filename}{Caption header}{Caption}{RelativeSize}
+% A relative Size of 1 means the figure has a width equal to textwidth
+% To reference the figure just use the image_filename:
+% \ref{image_filename} will be a valid label
+\newcommand{\figuremacroTCW}[4]{
+	\begin{figure*}[!t]%[htbp]
+		\centering
+		\includegraphics[width=#4\textwidth]{#1}
+		\caption[#2]{\textbf{#2} - #3}
+		\label{#1}
+	\end{figure*}
+}

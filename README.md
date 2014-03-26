@@ -3,7 +3,7 @@ PhD-Thesis
 
 Latex Files for my PhD thesis dissertation
 
-The Template I'm using is from the *Cambridge University Engineering Department* (CUED) PhD, obtained from [ShareLatex][1] and modified to add some compiling cleaning scripts (See Template/Scripts)
+The Template I'm using is from the [Cambridge University Engineering Department][1] (CUED) PhD, obtained from [ShareLatex][2] and modified to add some compiling cleaning scripts (See Template/Scripts)
 
 
 ## Scripts ##
@@ -12,7 +12,7 @@ The Template I'm using is from the *Cambridge University Engineering Department*
 
 ### Integrating cleaning script with TexMaker ###
 
-To integrate the cleaning scripts with [TexMaker][2], follow these instructions
+To integrate the cleaning scripts with [TexMaker][3], follow these instructions
 
   1. **Go To:** *User->User Commands->Edit User Commands*
   2. In a blank command space (eg. "Command 1") write:
@@ -26,6 +26,7 @@ To integrate the cleaning scripts with [TexMaker][2], follow these instructions
 
 
 <!-- Links -->
-[1]: https://www.sharelatex.com/templates/thesis/cambridge-university-engineering-department-(cued)-latex-phd-thesis-template
-[2]: http://www.xm1math.net/texmaker/
+[1]: http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/
+[2]: https://www.sharelatex.com/templates/thesis/cambridge-university-engineering-department-(cued)-latex-phd-thesis-template
+[3]: http://www.xm1math.net/texmaker/
 
